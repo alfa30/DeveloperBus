@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="ES">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script language="javascript" src='script/jquery-1.6.min.js'></script>
+  	<script language="javascript" src='script/ajax.util.js'></script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/estiloslog.css">
+	<title>Agrono.me | Registro</title>
+</head>
+
+
+
+<body>
+
+		<div class="contenedor">
+			<a href="index.html"><h1><img src="img/logoAgronomeWhite.png" alt="Agronome"></h1></a>
+
+			
+				<form name="loginForm" id="loginForm">
+				
+				<div id="cabeza-de-login">
+					<h2>Acceder</h2>
+				</div>
+				<div class="clear">
+						<span class="readonly"><input type="text"
+									style="width: 285px;" autocomplete="off" class="gsc-input"
+									maxlength="2048" name="usuario" id="usuario" placeholder="Nombre*" /></span>
+
+
+						<input type="password" style="width: 285px;"
+								autocomplete="off" class="gsc-input" maxlength="2048"
+								name="pass" id="pass" placeholder="Contraseña*"/>
+
+						<input type="button" class="save" title="Ingresar"
+								value="Ingresar" onclick="loginUser()" /> <a
+								href="registro.html" name="Registrarme"></a>
+
+					<a href="registro.html">Crear una cuenta</a>
+
+
+				</form>
+
+				<div class="message" id="login-show-message" style="display: none"></div>
+			
+			</div>
+	</div>
+</body>
+
+</html>

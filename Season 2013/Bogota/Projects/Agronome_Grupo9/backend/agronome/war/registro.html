@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+	<meta charset="utf-8">
+        <link rel="stylesheet" href="css/estiloslog.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <script language="javascript" src='script/jquery-1.6.min.js'></script>
+        <script language="javascript" src='script/ajax.util.js'></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="script/jquery-gmaps-latlon-picker.js"></script>
+        <title>Agrono.me | Registro</title>
+ 
+        <script type="text/javascript">
+        $( document ).ready(function() {
+        	
+        	$('#latitud').val(4.681345111873303);
+        	$('#longitud').val( -73.9990234375);
+        	$(".gllpUpdateButton").click();
+        });
+        </script>
+
+</head>
+
+<body>
+
+			<div class="contenedor">
+			    <a href="index.html"><h1><img src="img/logoAgronomeWhite.png" alt="Agronome" id="logo"></h1></a>		
+
+			<form name="proveedor-create-form" id="proveedor-create-form">
+			<h2>Registro</h2>
+
+				<input type="text" style="width: 285px;" autocomplete="off"  maxlength="2048" name="usuario" id="usuario" placeholder="Usuario*" />
+						
+				<input type="password" style="width: 285px;" autocomplete="off" maxlength="2048" name="pass" id="pass" placeholder="Contraseña*" />
+				
+                                <input type="password"style="width: 285px;" autocomplete="off" maxlength="2048" name="cnfpass" id="cnfpass" placeholder="Confirmar Contraseña*"/>
+				
+                                <input type="text" style="width: 285px;" autocomplete="off" maxlength="2048" name="nit" id="nit" placeholder="NIT" />
+							
+				<input type="text" style="width: 285px;" autocomplete="off"  maxlength="2048" name="nombre" id="nombre" placeholder="Nombre*"/>
+					
+				<input type="text" style="width: 285px;" autocomplete="off" maxlength="2048" name="telefono" id="telefono" placeholder="Teléfono*"/>
+				
+				<input type="text" style="width: 285px;" autocomplete="off" maxlength="2048"  name="etiquetas" id="etiquetas" placeholder="Etiquetas*"/>
+
+                                <aside class="registro-mapa">
+        			        <fieldset class="gllpLatlonPicker">
+                                                <input type="text" class="gllpSearchField" placeholder="Dirección*" style="width: 260px"; margin-bottom:"5px;"  > <input
+                                                        type="button" class="gllpSearchButton" value="Buscar">
+                                                <div class="gllpMap">Google
+                                                        Maps</div>
+                                                <br /> <input id="latitud" type="hidden" name="latitud" class="gllpLatitude"
+                                                        value="20" required="" /> <input type="hidden" name="longitud" id="longitud"
+                                                        class="gllpLongitude" value="20" required="" />
+                                                        <input type="text"class="gllpZoom" value="3" style="visibility: hidden;"/> 
+                             <input type="button"
+						class="gllpUpdateButton" value="Actualizar Mapa" style="visibility: hidden;"> <br />
+                                                        
+                                        </fieldset>
+                                </aside>
+
+
+							<input type="button" class="save" title="Save" value="Registrarme"
+                                        onclick="guardarProveedor()" /> 
+
+			</form>					
+
+
+                </div>
+                                <div class="message" id="proveedor-show-message" style="display: none"></div>
+
+		
+</body>
+
+</html>
